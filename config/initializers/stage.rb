@@ -1,0 +1,1 @@
+STAGES_COLLECTION = YAML.load(File.read(File.expand_path('../../../db/fixtures/stage.yml', __FILE__)))

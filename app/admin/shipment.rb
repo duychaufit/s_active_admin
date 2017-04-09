@@ -1,11 +1,9 @@
 ActiveAdmin.register Shipment, as: "Surveys" do
 
-filter :drivers_birthday, as: :string
-# filter :drivers_birthday
+  filter :milestones_address_cont_any, :as => :select, :multiple => true, :label => 'Address', collection: STAGES_COLLECTION["stages"]
 
-permit_params do
-  permitted = [:title, :text]
-  permitted
-end
-
+  permit_params do
+    permitted = [:title, :text]
+    permitted
+  end
 end
