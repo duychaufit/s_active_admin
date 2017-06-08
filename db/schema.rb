@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170409093530) do
 
-  create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
     t.text     "body",          limit: 65535
     t.string   "resource_id",                 null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20170409093530) do
     t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
   end
 
-  create_table "drivers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "drivers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.integer  "gender"
     t.datetime "birthday"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20170409093530) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "milestones", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "milestones", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.datetime "date"
     t.datetime "created_at",                null: false
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20170409093530) do
     t.text     "address",     limit: 65535
   end
 
-  create_table "shipments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "shipments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.text     "text",       limit: 65535
     t.datetime "created_at",               null: false
